@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+  </head>
+
+  <body>
+    <div class="titulo">
+      <div class="main-title">
+        <h1>Inventario Arbóreo en la Universidad del Valle</h1>
+
+        <p>Guardianes del Bosque: Un Inventario Arbóreo Detallado</p>
+      </div>
+    </div>
+
+    <div class="main-container">
+      <div class="map-container">
+        <div id="map"></div>
+      </div>
+      <script src="mapeo.js"></script>
+
+      <div class="form-container">
+        <form
+          action="/action_page.php"
+          class="formul"
+          style="text-align: center"
+        >
+          <p style="font-family: Arial, sans-serif; color: white">
+            Registro de características arbóreas:
+          </p>
+          <label
+            for="fname"
+            style="font-family: Arial, sans-serif; color: white"
+            >Nombre Científico:</label
+          ><br />
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            value="Desconocido"
+            style="font-family: Arial, sans-serif; color: black"
+          /><br />
+          <label
+            for="lname"
+            style="font-family: Arial, sans-serif; color: white"
+            >Nombre Común:</label
+          ><br />
+          <input
+            type="text"
+            id="lname"
+            name="lname"
+            value="Desconocido"
+            style="font-family: Arial, sans-serif; color: black"
+          /><br />
+          <label
+            for="state"
+            style="font-family: Arial, sans-serif; color: white"
+            >Estado:</label
+          ><br />
+          <input
+            type="text"
+            id="state"
+            name="state"
+            value="Desconocido"
+            style="font-family: Arial, sans-serif; color: black"
+          /><br /><br />
+          <div style="text-align: center">
+            <input
+              type="submit"
+              value="Cargar"
+              style="
+                background-color: gray;
+                color: black;
+                font-family: Arial, sans-serif;
+                box-shadow: none;
+                border: none;
+              "
+            />
+          </div>
+        </form>
+      </div>
+      <div class="third-column">
+        <form
+          action="/action_page.php"
+          class="formul"
+          style="text-align: center"
+        >
+          <p style="font-family: Arial, sans-serif; color: white">
+            Registro de datos personales:
+          </p>
+          <label
+            for="nombre"
+            style="font-family: Arial, sans-serif; color: white"
+            >Nombre:</label
+          ><br />
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            required
+            style="font-family: Arial, sans-serif; color: black"
+          /><br />
+          <label
+            for="apellido"
+            style="font-family: Arial, sans-serif; color: white"
+            >Apellido:</label
+          ><br />
+          <input
+            type="text"
+            id="apellido"
+            name="apellido"
+            required
+            style="font-family: Arial, sans-serif; color: black"
+          /><br />
+          <label
+            for="correo"
+            style="font-family: Arial, sans-serif; color: white"
+            >Correo Electrónico:</label
+          ><br />
+          <input
+            type="email"
+            id="correo"
+            name="correo"
+            required
+            style="font-family: Arial, sans-serif; color: black"
+          /><br />
+          <label
+            for="telefono"
+            style="font-family: Arial, sans-serif; color: white"
+            >Teléfono:</label
+          ><br />
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            style="font-family: Arial, sans-serif; color: black"
+          /><br /><br />
+          <div style="text-align: center">
+            <input
+              type="submit"
+              value="Enviar"
+              style="
+                background-color: gray;
+                color: black;
+                font-family: Arial, sans-serif;
+                box-shadow: none;
+                border: none;
+              "
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="coordinates-container">
+      <div class="coordinates">
+        <p style="font-size: 20px; color: rgb(255, 255, 255)">
+          Registro Visual Arboreo:
+        </p>
+        <form action="/action_page.php">
+          <div style="text-align: center">
+            <label
+              for="myfile"
+              style="color: white; font-family: Arial, sans-serif"
+              >Selecciona un archivo:</label
+            >
+          </div>
+          <div style="text-align: center">
+            <input
+              type="file"
+              id="myfile"
+              name="myfile"
+              style="color: white; font-family: Arial, sans-serif"
+            />
+            <div style="text-align: center">
+              <input
+                type="submit"
+                value="Cargar"
+                style="
+                  background-color: gray;
+                  color: black;
+                  font-family: Arial, sans-serif;
+                  box-shadow: none;
+                "
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
